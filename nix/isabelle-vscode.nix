@@ -143,9 +143,10 @@ stdenv.mkDerivation {
   buildPhase = ''
     runHook preBuild
 
+    cp ${isabelleSrc}/COPYRIGHT LICENSE.txt
     isabelle scala ${buildScript} "$PWD"
     yarn --offline compile
-    vsce package --no-dependencies -o isabelle-2.0.0.vsix
+    printf 'y\ny\n' | vsce package --no-dependencies -o isabelle-2.0.0.vsix
 
     runHook postBuild
   '';

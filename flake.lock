@@ -1,24 +1,54 @@
 {
   "nodes": {
-    "nixpkgs": {
+    "isabelle-src": {
+      "flake": false,
       "locked": {
-        "lastModified": 1789546076,
-        "narHash": "sha256-zVxLZiSnmaaPLwnhj7pwmqe3axBg/C6nG5JZsJMh2g4=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "b1b875982b17dabde9b4a37f3e229e74913e6db3",
-        "type": "github"
+        "lastModified": 1794522370,
+        "narHash": "sha256-tsN4Zuc2R3nmUCDWvzerQwHliv66R9ubsxkjTHqeHlw=",
+        "ref": "refs/heads/master",
+        "rev": "3bee77fb7e51cce8ba6d9c6512070b00b01a42f0",
+        "revCount": 86067,
+        "type": "git",
+        "url": "file:///home/srghma/seL4/isabelle"
       },
       "original": {
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "b1b875982b17dabde9b4a37f3e229e74913e6db3",
-        "type": "github"
+        "type": "git",
+        "url": "file:///home/srghma/seL4/isabelle"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1794564952,
+        "narHash": "sha256-VVuYoz9l30aPbBYBaRSSmrgLPWKf6mcwBIS40dX0cmc=",
+        "path": "/home/srghma/projects/nixpkgs",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/projects/nixpkgs",
+        "type": "path"
       }
     },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "isabelle-src": "isabelle-src",
+        "nixpkgs": "nixpkgs",
+        "seL4-nix-utils": "seL4-nix-utils"
+      }
+    },
+    "seL4-nix-utils": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1786097313,
+        "narHash": "sha256-MXDBNjGr2ndTeADRQmdsMS6MgPxI5N32qDXYyGxnq5Q=",
+        "ref": "refs/heads/main",
+        "rev": "c87fdc9b5138280e66bc6e361f219d530c3b4ec5",
+        "revCount": 146,
+        "type": "git",
+        "url": "file:///home/srghma/seL4/seL4-nix-utils"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///home/srghma/seL4/seL4-nix-utils"
       }
     }
   },

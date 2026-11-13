@@ -107,7 +107,7 @@ stdenv.mkDerivation (finalAttrs: {
     runHook preUnpack
 
     mkdir -p ${finalAttrs.dirname}
-    cp -r --no-preserve=mode "$src"/. ${finalAttrs.dirname}/
+    cp -r --preserve=mode,links "$src"/. ${finalAttrs.dirname}/
     chmod -R u+w ${finalAttrs.dirname}
 
     mkdir -p _contrib_src
@@ -151,7 +151,7 @@ stdenv.mkDerivation (finalAttrs: {
   checkPhase = "bin/isabelle build -v HOL-SMT_Examples";
 
   postPatch = ''
-    patchShebangs lib/Tools/ bin/
+    patchShebangs lib/Tools/ lib/scripts/ bin/
 
     # Make copied files writable in Nix builds
     substituteInPlace src/Pure/System/isabelle_system.scala \

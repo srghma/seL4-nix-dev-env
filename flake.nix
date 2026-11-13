@@ -3,10 +3,23 @@
 
   inputs = {
     nixpkgs.url = "path:/home/srghma/projects/nixpkgs";
+    isabelle-src = {
+      url = "git+file:///home/srghma/seL4/isabelle";
+      flake = false;
+    };
+    seL4-nix-utils = {
+      url = "git+file:///home/srghma/seL4/seL4-nix-utils";
+      flake = false;
+    };
   };
 
   outputs =
-    { self, nixpkgs }:
+    {
+      self,
+      nixpkgs,
+      isabelle-src,
+      seL4-nix-utils,
+    }:
     let
       systems = [ "x86_64-linux" ];
       forAllSystems = nixpkgs.lib.genAttrs systems;
@@ -17,11 +30,11 @@
         let
           pkgs = nixpkgs.legacyPackages.${system};
           isabelle = pkgs.callPackage ./nix/isabelle.nix {
-            isabelleSrc = ./isabelle;
+            isabelleSrc = isabelle-src;
           };
           isabelle-vscode = pkgs.callPackage ./nix/isabelle-vscode.nix {
             inherit isabelle;
-            isabelleSrc = ./isabelle;
+            isabelleSrc = isabelle-src;
           };
         in
         {
@@ -35,7 +48,7 @@
         system:
         let
           pkgs = nixpkgs.legacyPackages.${system};
-          pkgsSeL4 = pkgs.extend (import ./seL4-nix-utils/overlay.nix);
+          pkgsSeL4 = pkgs.extend (import "${seL4-nix-utils}/overlay.nix");
           isabelle = self.packages.${system}.isabelle;
           isabelle-vscode = self.packages.${system}.isabelle-vscode;
         in
