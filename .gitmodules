@@ -1,0 +1,21 @@
+[submodule "ci-actions"]
+	path = ci-actions
+	url = ssh://git@github.com/seL4/ci-actions.git
+[submodule "isabelle"]
+	path = isabelle
+	url = ssh://git@github.com/seL4/isabelle.git
+[submodule "l4v"]
+	path = l4v
+	url = ssh://git@github.com/seL4/l4v.git
+[submodule "seL4"]
+	path = seL4
+	url = ssh://git@github.com/seL4/seL4.git
+[submodule "seL4-CAmkES-L4v-dockerfiles"]
+	path = seL4-CAmkES-L4v-dockerfiles
+	url = ssh://git@github.com/seL4/seL4-CAmkES-L4v-dockerfiles.git
+[submodule "seL4-nix-utils"]
+	path = seL4-nix-utils
+	url = ssh://git@github.com/DLR-FT/seL4-nix-utils.git
+[submodule "sel4test-manifest"]
+	path = sel4test-manifest
+	url = ssh://git@github.com/seL4/sel4test-manifest.git

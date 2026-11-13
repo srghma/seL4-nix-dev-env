@@ -55,28 +55,30 @@
         {
           default = pkgs.mkShell {
             packages = with pkgs; [
-              # Isabelle + VSCode extension + IDE
+              # Isabelle + VSCode extension
               isabelle
               isabelle-vscode
-              just
-              antigravity-ide
+
+              # Already in system PATH (/run/current-system/sw/bin):
+              # antigravity-ide
+              # just
+              # git
+              # curl
+              # rsync
+              # zstd
 
               # l4v proof dependencies
               mlton
               stack
               haskell.compiler.ghc94
               texliveMedium
-              rsync
               librsvg
-              zstd
 
               # seL4 / CAmkES build & simulation tools
               ccache
               cmake
               cmakeCurses
-              curl
               dtc
-              git
               gitRepo
               libxml2
               ncurses

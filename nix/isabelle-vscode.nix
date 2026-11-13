@@ -143,6 +143,10 @@ stdenv.mkDerivation {
   buildPhase = ''
     runHook preBuild
 
+    substituteInPlace package.json \
+      --replace-fail '"vscode": "^1.135.0"' '"vscode": "^1.107.0"' \
+      --replace-fail '"@types/vscode": "^1.135.0"' '"@types/vscode": "^1.107.0"'
+
     cp ${isabelleSrc}/COPYRIGHT LICENSE.txt
     isabelle scala ${buildScript} "$PWD"
     yarn --offline compile
