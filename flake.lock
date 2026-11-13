@@ -3,11 +3,11 @@
     "isabelle-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1794522370,
-        "narHash": "sha256-tsN4Zuc2R3nmUCDWvzerQwHliv66R9ubsxkjTHqeHlw=",
-        "ref": "refs/heads/master",
-        "rev": "3bee77fb7e51cce8ba6d9c6512070b00b01a42f0",
-        "revCount": 86067,
+        "lastModified": 1792983624,
+        "narHash": "sha256-X0SgbLyG6V0FlCHsN7ig1dGrj6dVR6x/jvabrGk5DfM=",
+        "ref": "refs/heads/ts-2026",
+        "rev": "53c4a3c251a284d094ae467a43d7fb51eb38cf58",
+        "revCount": 85832,
         "type": "git",
         "url": "file:///home/srghma/seL4/isabelle"
       },

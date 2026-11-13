@@ -57,7 +57,7 @@
             packages = with pkgs; [
               # Isabelle + VSCode extension
               isabelle
-              isabelle-vscode
+              # isabelle-vscode
 
               # Already in system PATH (/run/current-system/sw/bin):
               # antigravity-ide
@@ -70,8 +70,15 @@
               # l4v proof dependencies
               mlton
               stack
+              cabal-install
               haskell.compiler.ghc94
-              texliveMedium
+              (texliveMedium.withPackages (
+                ps: with ps; [
+                  collection-latexextra
+                  collection-bibtexextra
+                  collection-metapost
+                ]
+              ))
               librsvg
 
               # seL4 / CAmkES build & simulation tools

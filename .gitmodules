@@ -19,3 +19,9 @@
 [submodule "sel4test-manifest"]
 	path = sel4test-manifest
 	url = ssh://git@github.com/seL4/sel4test-manifest.git
+[submodule "camkes-vm-examples-manifest"]
+	path = camkes-vm-examples-manifest
+	url = ssh://git@github.com/seL4/camkes-vm-examples-manifest.git
+[submodule "capdl"]
+	path = capdl
+	url = ssh://git@github.com/seL4/capdl.git

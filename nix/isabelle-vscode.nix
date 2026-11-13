@@ -127,7 +127,7 @@ stdenv.mkDerivation {
 
   yarnOfflineCache = fetchYarnDeps {
     yarnLock = "${isabelleSrc}/src/Tools/VSCode/extension/yarn.lock";
-    hash = "sha256-YZDVYkOty5dMtv5Fb7HqdR2YkCntEbnF6U9BduG6SW8=";
+    hash = "sha256-UnsSOa8iAjxdTzF7aPkDaJOj0h1CZYaasbozMTW6u1I=";
   };
 
   nativeBuildInputs = [

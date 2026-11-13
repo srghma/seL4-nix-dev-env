@@ -113,12 +113,17 @@ stdenv.mkDerivation (finalAttrs: {
     mkdir -p _contrib_src
     tar -xzf ${contribTarball} -C _contrib_src --strip-components=1
     cp -r _contrib_src/contrib ${finalAttrs.dirname}/
-    rm -rf ${finalAttrs.dirname}/contrib/flatlaf-*
-    tar -xzf ${flatlafTarball} -C ${finalAttrs.dirname}/contrib/
 
-    sed -n '/^#bundled components/,$p' _contrib_src/etc/components \
-      | sed 's/flatlaf-3\.7\.2/flatlaf-3.8/' \
-      >> ${finalAttrs.dirname}/etc/components
+    if grep -q 'flatlaf-3\.8' ${finalAttrs.dirname}/Admin/components/main; then
+      rm -rf ${finalAttrs.dirname}/contrib/flatlaf-*
+      tar -xzf ${flatlafTarball} -C ${finalAttrs.dirname}/contrib/
+      sed -n '/^#bundled components/,$p' _contrib_src/etc/components \
+        | sed 's/flatlaf-3\.7\.2/flatlaf-3.8/' \
+        >> ${finalAttrs.dirname}/etc/components
+    else
+      sed -n '/^#bundled components/,$p' _contrib_src/etc/components \
+        >> ${finalAttrs.dirname}/etc/components
+    fi
 
     rm -rf _contrib_src
     sourceRoot=${finalAttrs.dirname}
@@ -155,7 +160,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     # Make copied files writable in Nix builds
     substituteInPlace src/Pure/System/isabelle_system.scala \
-      --replace-fail 'StandardCopyOption.REPLACE_EXISTING)' $'StandardCopyOption.REPLACE_EXISTING)\n        target.setWritable(true)'
+      --replace-fail $'StandardCopyOption.COPY_ATTRIBUTES,\n          StandardCopyOption.REPLACE_EXISTING)' $'StandardCopyOption.COPY_ATTRIBUTES,\n          StandardCopyOption.REPLACE_EXISTING)\n        target.setWritable(true)'
 
     substituteInPlace src/Pure/ML/ml_settings.scala \
       --replace-fail 'polyml_home + Path.basic(ml_platform)' 'Path.explode("${polyml'}/bin")'
@@ -277,7 +282,8 @@ stdenv.mkDerivation (finalAttrs: {
       ARGS["''${#ARGS[@]}"]="src/Tools/Setup/$SRC"
     done
     echo "Building isabelle setup"
-    javac -d "$TARGET_DIR" -classpath "${scala_3.bare}/maven2/org/scala-lang/scala3-interfaces/${scala_3.version}/scala3-interfaces-${scala_3.version}.jar:${scala_3.bare}/maven2/org/scala-lang/scala3-compiler_3/${scala_3.version}/scala3-compiler_3-${scala_3.version}.jar:./contrib/flatlaf-3.8/lib/flatlaf-3.8-no-natives.jar" "''${ARGS[@]}"
+    FLATLAF_JAR=$(echo ./contrib/flatlaf-*/lib/flatlaf-*-no-natives.jar)
+    javac -d "$TARGET_DIR" -classpath "${scala_3.bare}/maven2/org/scala-lang/scala3-interfaces/${scala_3.version}/scala3-interfaces-${scala_3.version}.jar:${scala_3.bare}/maven2/org/scala-lang/scala3-compiler_3/${scala_3.version}/scala3-compiler_3-${scala_3.version}.jar:$FLATLAF_JAR" "''${ARGS[@]}"
     jar -c -f "$TARGET_DIR/isabelle_setup.jar" -e "isabelle.setup.Setup" -C "$TARGET_DIR" isabelle
     rm -rf "$TARGET_DIR/isabelle"
 

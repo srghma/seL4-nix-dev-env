@@ -29,9 +29,19 @@ jedit *args:
 vscode-server *args:
     nix develop -c isabelle vscode_server {{ args }}
 
-# Run l4v proof tests (arch: ARM, ARM_HYP, X64, RISCV64, AARCH64)
-l4v-test arch="ARM" *args:
-    cd l4v && nix develop ..#default -c ./run_tests -v {{ arch }} {{ args }}
+# List available l4v proof tests
+l4v-list arch="ARM":
+    cd l4v && nix develop ..#default -c env L4V_ARCH={{ arch }} ./run_tests -l
+
+# Run l4v proof tests via ./run_tests (arch: ARM, ARM_HYP, X64, RISCV64, AARCH64)
+l4v-test arch="ARM" *tests: build-isabelle
+    #!/usr/bin/env bash
+    set -euo pipefail
+    ROOT_DIR="$PWD"
+    ISA_DIR="$(readlink -f result-isabelle)/share/Isabelle2026-git"
+    trap 'ln -sfn ../isabelle "$ROOT_DIR/l4v/isabelle"' EXIT
+    ln -sfn "$ISA_DIR" "$ROOT_DIR/l4v/isabelle"
+    cd l4v && nix develop ..#default -c env L4V_ARCH={{ arch }} ISABELLE_THREADS=2 ./run_tests -v -j 1 {{ tests }}
 
 # Configure and build seL4 test suite in build-<plat>
 sel4-build plat="x86_64" sim="TRUE":
