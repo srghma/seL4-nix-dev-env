@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "capdl-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794374215,
+        "narHash": "sha256-TiNg5+zJf+6+WsmxLFlNa+erqmJMTwhPwpgMV19C1IY=",
+        "ref": "refs/heads/master",
+        "rev": "55d2ef24aeb6de08f6bfc27ed1942eec54164a62",
+        "revCount": 767,
+        "type": "git",
+        "url": "file:///home/srghma/seL4/capdl"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///home/srghma/seL4/capdl"
+      }
+    },
     "isabelle-src": {
       "flake": false,
       "locked": {
@@ -30,9 +46,11 @@
     },
     "root": {
       "inputs": {
+        "capdl-src": "capdl-src",
         "isabelle-src": "isabelle-src",
         "nixpkgs": "nixpkgs",
-        "seL4-nix-utils": "seL4-nix-utils"
+        "seL4-nix-utils": "seL4-nix-utils",
+        "seL4-src": "seL4-src"
       }
     },
     "seL4-nix-utils": {
@@ -49,6 +67,22 @@
       "original": {
         "type": "git",
         "url": "file:///home/srghma/seL4/seL4-nix-utils"
+      }
+    },
+    "seL4-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794200598,
+        "narHash": "sha256-8g5A5e1N2i8ojDPKKDQPvUkHrX84TtslTsPk8Czzmww=",
+        "ref": "refs/heads/master",
+        "rev": "c98d70adf15e8be7d3b99085c28d057069ba7155",
+        "revCount": 5070,
+        "type": "git",
+        "url": "file:///home/srghma/seL4/seL4"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///home/srghma/seL4/seL4"
       }
     }
   },
