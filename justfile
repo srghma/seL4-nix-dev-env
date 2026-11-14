@@ -54,6 +54,17 @@ l4v-test arch="ARM" *tests: build-isabelle
     ln -sfn "$ISA_DIR" "$ROOT_DIR/l4v/isabelle"
     cd l4v && nix develop ..#default -c env L4V_ARCH={{ arch }} ISABELLE_THREADS=2 ./run_tests -v -j 1 --scale-timeouts 3 {{ tests }}
 
+# Run l4v proof tests across ALL architectures (ARM, ARM_HYP, X64, RISCV64, AARCH64)
+# Omit `tests` to run every non-excluded test on every arch.
+l4v-test-all *tests: build-isabelle
+    #!/usr/bin/env bash
+    set -euo pipefail
+    ROOT_DIR="$PWD"
+    ISA_DIR="$(readlink -f result-isabelle)/share/Isabelle2026-git"
+    trap 'ln -sfn ../isabelle "$ROOT_DIR/l4v/isabelle"' EXIT
+    ln -sfn "$ISA_DIR" "$ROOT_DIR/l4v/isabelle"
+    cd l4v && nix develop ..#default -c env ISABELLE_THREADS=2 ./run_tests --l4v-arch-all -v -j 1 --scale-timeouts 3 {{ tests }}
+
 # Configure and build seL4 test suite in build-<plat>
 sel4-build plat="x86_64" sim="TRUE":
     mkdir -p build-{{ plat }}
