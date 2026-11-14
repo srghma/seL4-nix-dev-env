@@ -1,0 +1,9 @@
+
+chapter Test
+
+session Untyped_Lambda = HOL +
+  options [timeout = 300, document = false]
+  theories
+    Syntax
+    Reduction
+    Church_Rosser

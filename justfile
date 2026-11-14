@@ -41,7 +41,7 @@ l4v-test arch="ARM" *tests: build-isabelle
     ISA_DIR="$(readlink -f result-isabelle)/share/Isabelle2026-git"
     trap 'ln -sfn ../isabelle "$ROOT_DIR/l4v/isabelle"' EXIT
     ln -sfn "$ISA_DIR" "$ROOT_DIR/l4v/isabelle"
-    cd l4v && nix develop ..#default -c env L4V_ARCH={{ arch }} ISABELLE_THREADS=2 ./run_tests -v -j 1 {{ tests }}
+    cd l4v && nix develop ..#default -c env L4V_ARCH={{ arch }} ISABELLE_THREADS=2 ./run_tests -v -j 1 --scale-timeouts 3 {{ tests }}
 
 # Configure and build seL4 test suite in build-<plat>
 sel4-build plat="x86_64" sim="TRUE":

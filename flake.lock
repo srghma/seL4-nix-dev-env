@@ -1,19 +1,111 @@
 {
   "nodes": {
+    "camkes-tool-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577701,
+        "narHash": "sha256-DXhSA3Pxui4k3SrArXREw6XT+bBVNE3OiDDyNbX4DDs=",
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/camkes-tool",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/camkes-tool",
+        "type": "path"
+      }
+    },
+    "camkes-vm-examples-manifest-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794660163,
+        "narHash": "sha256-EBV/KFC3HSGGX/Ip7qqgqL5IxBbcjyVq3nHmxwekKwg=",
+        "path": "/home/srghma/seL4/camkes-vm-examples-manifest",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/camkes-vm-examples-manifest",
+        "type": "path"
+      }
+    },
+    "camkes-vm-examples-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577841,
+        "narHash": "sha256-o15fz8r1mLN3+LJ9N7U+Mbm+xfD627eH7akIlo/XhU8=",
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/vm-examples",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/vm-examples",
+        "type": "path"
+      }
+    },
+    "camkes-vm-images-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577887,
+        "narHash": "sha256-vcgF4Ge9EsI1C9hdEfkuVtBfz2Zd7x2oXlzMGC7nb3w=",
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/camkes-vm-images",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/camkes-vm-images",
+        "type": "path"
+      }
+    },
+    "camkes-vm-linux-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577786,
+        "narHash": "sha256-4uA48KP/liE2JIy9Arj47txDrA8ULujFG3hXFIPTs30=",
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/vm-linux",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/vm-linux",
+        "type": "path"
+      }
+    },
+    "camkes-vm-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577899,
+        "narHash": "sha256-2jBs+/1gLaGSWbkITvW/0UZsOD4eG5rUPASmwOKGa2c=",
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/vm",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/vm",
+        "type": "path"
+      }
+    },
     "capdl-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1794374215,
-        "narHash": "sha256-TiNg5+zJf+6+WsmxLFlNa+erqmJMTwhPwpgMV19C1IY=",
-        "ref": "refs/heads/master",
-        "rev": "55d2ef24aeb6de08f6bfc27ed1942eec54164a62",
-        "revCount": 767,
-        "type": "git",
-        "url": "file:///home/srghma/seL4/capdl"
+        "lastModified": 1794660163,
+        "narHash": "sha256-Wc3lpOybsPVWsuUMGL5htTnofY6Re4abKLycthi9RsY=",
+        "path": "/home/srghma/seL4/capdl",
+        "type": "path"
       },
       "original": {
-        "type": "git",
-        "url": "file:///home/srghma/seL4/capdl"
+        "path": "/home/srghma/seL4/capdl",
+        "type": "path"
+      }
+    },
+    "concurrencytest-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1793925405,
+        "narHash": "sha256-HGUfd+yOs69lrjbM4BPEBarwJxAQI77RCFawDoppCA4=",
+        "owner": "cgoldberg",
+        "repo": "concurrencytest",
+        "rev": "f37b94c87fb7b55ac0fe5eec1794334e9af26d02",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cgoldberg",
+        "ref": "0.1.12",
+        "repo": "concurrencytest",
+        "type": "github"
       }
     },
     "flake-utils": {
@@ -21,140 +113,443 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1731533236,
-        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "lastModified": 1794427683,
+        "narHash": "sha256-o7ey9gEilsxaifqJWnBDlYSKbNWYQYtKwDyXeZU2kaU=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "rev": "cd489559845d81f673a12885576016c65cbe9363",
         "type": "github"
       },
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "global-components-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577708,
+        "narHash": "sha256-Csrvl/WSSDYfEqtdZW0rcuPLz404JqvyZ/QdZD0aF8Q=",
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/global-components",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/global-components",
+        "type": "path"
+      }
+    },
+    "guardonce-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1543794779,
+        "narHash": "sha256-yTywLxvo6R02svdfHx5iP5njFUTWdhnwNXN6BNIbyR8=",
+        "owner": "cgmb",
+        "repo": "guardonce",
+        "rev": "a830d4638723f9e619a1462f470fb24df1cb08dd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cgmb",
+        "ref": "v2.4.0",
+        "repo": "guardonce",
         "type": "github"
       }
     },
     "isabelle-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1792983624,
-        "narHash": "sha256-X0SgbLyG6V0FlCHsN7ig1dGrj6dVR6x/jvabrGk5DfM=",
-        "ref": "refs/heads/ts-2026",
-        "rev": "53c4a3c251a284d094ae467a43d7fb51eb38cf58",
-        "revCount": 85832,
-        "type": "git",
-        "url": "file:///home/srghma/seL4/isabelle"
+        "lastModified": 1794660163,
+        "narHash": "sha256-2JGsSEs/g6SUlXPCROryGeIXjgANzFhNEe0FI4XubGY=",
+        "path": "/home/srghma/seL4/isabelle",
+        "type": "path"
       },
       "original": {
-        "type": "git",
-        "url": "file:///home/srghma/seL4/isabelle"
+        "path": "/home/srghma/seL4/isabelle",
+        "type": "path"
       }
     },
-    "microkit-seL4-src": {
+    "libzmq-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1764023638,
-        "narHash": "sha256-kzRV3qIsfyIFoc2hT6l0cIyR6zLD4yHcPXCAbGAQGsk=",
-        "owner": "seL4",
-        "repo": "seL4",
-        "rev": "c0fc32450fb5e8460083b89a84d067249b109cfc",
-        "type": "github"
+        "lastModified": 1794577717,
+        "narHash": "sha256-L8LAycebDoDgkWOD16eIPwAbTWl+rXEmzeBqQuIGwxM=",
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/libzmq",
+        "type": "path"
       },
       "original": {
-        "owner": "seL4",
-        "ref": "14.0.0",
-        "repo": "seL4",
-        "type": "github"
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/libzmq",
+        "type": "path"
+      }
+    },
+    "lwip-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577716,
+        "narHash": "sha256-5D+ZZTji7ohS6FFH71pKQdYRH93gvumpyJBv+CmLJBc=",
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/lwip",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/lwip",
+        "type": "path"
       }
     },
     "microkit-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1764123393,
-        "narHash": "sha256-6v54u4f3ktEoHkmGrijHqfaKyqOIK7HLQTnNCWrmSDI=",
+        "lastModified": 1793339710,
+        "narHash": "sha256-+ZP59e5nOzTwtuO2eoYQe0TAHZquLEsJA06qH3GQ+pc=",
         "owner": "seL4",
         "repo": "microkit",
-        "rev": "e043cec8d8613e7473368ec56a8843aacfca010b",
+        "rev": "b2558a900c036bded0b7c54437fcebbdff96f937",
         "type": "github"
       },
       "original": {
         "owner": "seL4",
-        "ref": "2.1.0",
+        "ref": "2.4.0",
         "repo": "microkit",
         "type": "github"
       }
     },
+    "musllibc-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577721,
+        "narHash": "sha256-Zcq6Hc3ZPh+wXeNHL0cnmqf27jtaITox67U2xT7skAI=",
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/musllibc",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/musllibc",
+        "type": "path"
+      }
+    },
+    "nanopb-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577672,
+        "narHash": "sha256-ZCZg7QJZnQWs6hMDzFfFOehl3B0hLqtu66zXaL5fTx8=",
+        "path": "/home/srghma/seL4/sel4test-ws/tools/nanopb",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/sel4test-ws/tools/nanopb",
+        "type": "path"
+      }
+    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1794564952,
-        "narHash": "sha256-VVuYoz9l30aPbBYBaRSSmrgLPWKf6mcwBIS40dX0cmc=",
+        "lastModified": 1794590242,
+        "narHash": "sha256-3GuEs0EGgGvmpW1xe5TWQo03krjeW+hO759srFPamFQ=",
         "path": "/home/srghma/projects/nixpkgs",
         "type": "path"
       },
       "original": {
         "path": "/home/srghma/projects/nixpkgs",
+        "type": "path"
+      }
+    },
+    "opensbi-sel4test-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577668,
+        "narHash": "sha256-VHFGqDStFT7o3kMrGlWp52Pwc9P7cPqOmd0lbg/ljzw=",
+        "path": "/home/srghma/seL4/sel4test-ws/tools/opensbi",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/sel4test-ws/tools/opensbi",
+        "type": "path"
+      }
+    },
+    "opensbi-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1782829194,
+        "narHash": "sha256-3RXsdo5e494odYtcRMMtAwes2LLniohHlOXEWy6CmrU=",
+        "owner": "riscv-software-src",
+        "repo": "opensbi",
+        "rev": "cbf9f6734dd85a982c63e3cb5db7ffe09da839ca",
+        "type": "github"
+      },
+      "original": {
+        "owner": "riscv-software-src",
+        "ref": "v1.9",
+        "repo": "opensbi",
+        "type": "github"
+      }
+    },
+    "picotcp-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577747,
+        "narHash": "sha256-miJYMUaVz5aX93FbedVaFGVsGFCwLwWLcwlCBJew2r8=",
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/picotcp",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/picotcp",
+        "type": "path"
+      }
+    },
+    "polly-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577798,
+        "narHash": "sha256-CEDIimZRjGYC0GugwofZXhLH0gVGF9dTwfzVE3bS/GM=",
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/tools/polly",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/tools/polly",
+        "type": "path"
+      }
+    },
+    "projects-libs-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577729,
+        "narHash": "sha256-cOlniq/HSPWdEGtEKv2WggMpt7T1al7kcVUckJ041zc=",
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/projects_libs",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/projects_libs",
         "type": "path"
       }
     },
     "root": {
       "inputs": {
+        "camkes-tool-src": "camkes-tool-src",
+        "camkes-vm-examples-manifest-src": "camkes-vm-examples-manifest-src",
+        "camkes-vm-examples-src": "camkes-vm-examples-src",
+        "camkes-vm-images-src": "camkes-vm-images-src",
+        "camkes-vm-linux-src": "camkes-vm-linux-src",
+        "camkes-vm-src": "camkes-vm-src",
         "capdl-src": "capdl-src",
+        "global-components-src": "global-components-src",
         "isabelle-src": "isabelle-src",
+        "libzmq-src": "libzmq-src",
+        "lwip-src": "lwip-src",
+        "musllibc-src": "musllibc-src",
+        "nanopb-src": "nanopb-src",
         "nixpkgs": "nixpkgs",
+        "opensbi-sel4test-src": "opensbi-sel4test-src",
+        "picotcp-src": "picotcp-src",
+        "polly-src": "polly-src",
+        "projects-libs-src": "projects-libs-src",
+        "seL4-libs-src": "seL4-libs-src",
         "seL4-nix-utils": "seL4-nix-utils",
-        "seL4-src": "seL4-src"
+        "seL4-projects-libs-src": "seL4-projects-libs-src",
+        "seL4-src": "seL4-src",
+        "seL4-tools-src": "seL4-tools-src",
+        "sel4runtime-src": "sel4runtime-src",
+        "sel4test-manifest-src": "sel4test-manifest-src",
+        "sel4test-src": "sel4test-src",
+        "util-libs-src": "util-libs-src"
+      }
+    },
+    "seL4-libs-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577736,
+        "narHash": "sha256-LwP2ciXCwezc0yRanGAnsr86qHkVa7j242f/CZCr8iY=",
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/seL4_libs",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/seL4_libs",
+        "type": "path"
       }
     },
     "seL4-nix-utils": {
       "inputs": {
+        "camkes-tool-src": [
+          "camkes-tool-src"
+        ],
+        "camkes-vm-examples-manifest-src": [
+          "camkes-vm-examples-manifest-src"
+        ],
+        "camkes-vm-examples-src": [
+          "camkes-vm-examples-src"
+        ],
+        "camkes-vm-images-src": [
+          "camkes-vm-images-src"
+        ],
+        "camkes-vm-linux-src": [
+          "camkes-vm-linux-src"
+        ],
+        "camkes-vm-src": [
+          "camkes-vm-src"
+        ],
         "capdl-src": [
           "capdl-src"
         ],
+        "concurrencytest-src": "concurrencytest-src",
         "flake-utils": "flake-utils",
-        "microkit-seL4-src": "microkit-seL4-src",
+        "global-components-src": [
+          "global-components-src"
+        ],
+        "guardonce-src": "guardonce-src",
+        "libzmq-src": [
+          "libzmq-src"
+        ],
+        "lwip-src": [
+          "lwip-src"
+        ],
+        "microkit-seL4-src": [
+          "seL4-nix-utils",
+          "seL4-src"
+        ],
         "microkit-src": "microkit-src",
+        "musllibc-src": [
+          "musllibc-src"
+        ],
+        "nanopb-src": [
+          "nanopb-src"
+        ],
         "nixpkgs": [
           "nixpkgs"
+        ],
+        "opensbi-sel4test-src": [
+          "opensbi-sel4test-src"
+        ],
+        "opensbi-src": "opensbi-src",
+        "picotcp-src": [
+          "picotcp-src"
+        ],
+        "polly-src": [
+          "polly-src"
+        ],
+        "projects-libs-src": [
+          "projects-libs-src"
+        ],
+        "seL4-libs-src": [
+          "seL4-libs-src"
+        ],
+        "seL4-projects-libs-src": [
+          "seL4-projects-libs-src"
         ],
         "seL4-src": [
           "seL4-src"
         ],
-        "treefmt-nix": "treefmt-nix"
+        "seL4-tools-src": [
+          "seL4-tools-src"
+        ],
+        "sel4runtime-src": [
+          "sel4runtime-src"
+        ],
+        "sel4test-manifest-src": [
+          "sel4test-manifest-src"
+        ],
+        "sel4test-src": [
+          "sel4test-src"
+        ],
+        "treefmt-nix": "treefmt-nix",
+        "util-libs-src": [
+          "util-libs-src"
+        ],
+        "xilinx-atf-src": "xilinx-atf-src",
+        "xilinx-embeddedsw-src": "xilinx-embeddedsw-src",
+        "xilinx-uboot-src": "xilinx-uboot-src"
       },
       "locked": {
-        "lastModified": 1794577955,
-        "narHash": "sha256-zIs7+NSnRIBu5/TPhQSCZ9i93m708S8abrwT+uKRobQ=",
+        "lastModified": 1794660163,
+        "narHash": "sha256-CrS1XG60Z9lnhrM5iYMMej3au3Aax2NDStcw5YD9kJY=",
         "path": "/home/srghma/seL4/seL4-nix-utils",
         "type": "path"
       },
       "original": {
         "path": "/home/srghma/seL4/seL4-nix-utils",
+        "type": "path"
+      }
+    },
+    "seL4-projects-libs-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577743,
+        "narHash": "sha256-fkgP/O5TiVI4/+Xm+XjMDqBqGt5kOVz8gCyuR9p9cIg=",
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/seL4_projects_libs",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/seL4_projects_libs",
         "type": "path"
       }
     },
     "seL4-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1794200598,
-        "narHash": "sha256-8g5A5e1N2i8ojDPKKDQPvUkHrX84TtslTsPk8Czzmww=",
-        "ref": "refs/heads/master",
-        "rev": "c98d70adf15e8be7d3b99085c28d057069ba7155",
-        "revCount": 5070,
-        "type": "git",
-        "url": "file:///home/srghma/seL4/seL4"
+        "lastModified": 1794660163,
+        "narHash": "sha256-2k/fG6b69GWDPC4Ak/ihrmDyWkoFHojrUmIYNbQ4jeo=",
+        "path": "/home/srghma/seL4/seL4",
+        "type": "path"
       },
       "original": {
-        "type": "git",
-        "url": "file:///home/srghma/seL4/seL4"
+        "path": "/home/srghma/seL4/seL4",
+        "type": "path"
+      }
+    },
+    "seL4-tools-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577816,
+        "narHash": "sha256-u+6VOa/m78iaPqy+/Nt05mwxbJhqBUSE5PH7wtQO0No=",
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/tools/seL4",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/tools/seL4",
+        "type": "path"
+      }
+    },
+    "sel4runtime-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577744,
+        "narHash": "sha256-LYkKuGF8L4cJOZvdUGtkzMa9sxRxPHtgaUXVki1/X/M=",
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/sel4runtime",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/sel4runtime",
+        "type": "path"
+      }
+    },
+    "sel4test-manifest-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794660163,
+        "narHash": "sha256-kKsGEXMl+eZZ/g9Q+qCJowEo4YPpdl/CKesV9DrO1Jg=",
+        "path": "/home/srghma/seL4/sel4test-manifest",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/sel4test-manifest",
+        "type": "path"
+      }
+    },
+    "sel4test-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577663,
+        "narHash": "sha256-F/u5cuSKJjmUG/JBc5ROQ5EuZBLKMjnb2B7339DNGPc=",
+        "path": "/home/srghma/seL4/sel4test-ws/projects/sel4test",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/sel4test-ws/projects/sel4test",
+        "type": "path"
       }
     },
     "systems": {
       "locked": {
-        "lastModified": 1681028828,
-        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "lastModified": 1791244623,
+        "narHash": "sha256-uuanbkFk8a313Zfrxdcz8Us/yQtaxNnKJtX8v0ZPpd8=",
         "owner": "nix-systems",
         "repo": "default",
-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "rev": "d36eeed142f88b5a636f2e3856a53c61654cf29b",
         "type": "github"
       },
       "original": {
@@ -171,16 +566,80 @@
         ]
       },
       "locked": {
-        "lastModified": 1785360170,
-        "narHash": "sha256-XE1lKgQ3eIO3E7zWryqcRsax+mYXod/5RHBn4YaR9YE=",
+        "lastModified": 1791885023,
+        "narHash": "sha256-C3alQ2MEt0zVrUSho5NUDo3jmhbff72++bfwoqT9Omo=",
         "owner": "numtide",
         "repo": "treefmt-nix",
-        "rev": "d1187f8bc71fb8aab02395869ec3f5c1920f75c0",
+        "rev": "0d6d739a833ba9a9c93034862e4a7b061a062a1c",
         "type": "github"
       },
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "util-libs-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794577749,
+        "narHash": "sha256-sQZ2nLdZx5AOlvGbfkki42Vn46wRCvQqatl2nvL5gVs=",
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/util_libs",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/srghma/seL4/camkes-vm-examples-ws/projects/util_libs",
+        "type": "path"
+      }
+    },
+    "xilinx-atf-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1777521351,
+        "narHash": "sha256-9ew8haE87vX3d9qeAjMni5qKZqExZy3q3vN92TlTnug=",
+        "owner": "Xilinx",
+        "repo": "arm-trusted-firmware",
+        "rev": "e828ec25463d328f1591b6fa0d5a38886fad8d31",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Xilinx",
+        "ref": "xilinx-v2026.1",
+        "repo": "arm-trusted-firmware",
+        "type": "github"
+      }
+    },
+    "xilinx-embeddedsw-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1793819721,
+        "narHash": "sha256-hKXrIHCP9SMWtqlmPeHz6NojpiMk9DE66aQuMEBz+9I=",
+        "owner": "Xilinx",
+        "repo": "embeddedsw",
+        "rev": "2cb143858a0140d616252fe3ca6b53c70871a843",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Xilinx",
+        "ref": "xilinx_v2026.2",
+        "repo": "embeddedsw",
+        "type": "github"
+      }
+    },
+    "xilinx-uboot-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1779092376,
+        "narHash": "sha256-0C3ZK6MYcJxSSHSe4gNrh2lozPR8xedmxkTwt+Q5/AM=",
+        "owner": "Xilinx",
+        "repo": "u-boot-xlnx",
+        "rev": "c4abf697920c6b4a2f3e24da5721fb27fa2e4ce6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Xilinx",
+        "ref": "xilinx-v2026.1",
+        "repo": "u-boot-xlnx",
         "type": "github"
       }
     }
