@@ -3,7 +3,7 @@ theory Reduction
 begin
 
 inductive beta :: "tm \<Rightarrow> tm \<Rightarrow> bool" (infix "\<rightarrow>\<^sub>\<beta>" 50) where
-  beta_step[intro]: "(App (Abs t) s) \<rightarrow>\<^sub>\<beta> (t [s / 0])"
+  beta_step[intro]: "(App (Abs t) s) \<rightarrow>\<^sub>\<beta> (t \<langle>s / 0\<rangle>)"
 | beta_appL[intro]: "t \<rightarrow>\<^sub>\<beta> t' \<Longrightarrow> App t u \<rightarrow>\<^sub>\<beta> App t' u"
 | beta_appR[intro]: "u \<rightarrow>\<^sub>\<beta> u' \<Longrightarrow> App t u \<rightarrow>\<^sub>\<beta> App t u'"
 | beta_abs[intro]:  "t \<rightarrow>\<^sub>\<beta> t' \<Longrightarrow> Abs t \<rightarrow>\<^sub>\<beta> Abs t'"

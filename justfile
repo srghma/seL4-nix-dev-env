@@ -29,6 +29,17 @@ jedit *args:
 vscode-server *args:
     nix develop -c isabelle vscode_server {{ args }}
 
+# Build test-isabelle (Untyped_Lambda), print warnings, and copy output to copyq
+test-isabelle-build-with-warnings:
+    #!/usr/bin/env nu
+    let b = (^nix develop -c isabelle build -d test-isabelle -o threads=2 -j 1 Untyped_Lambda | complete)
+    let w = (^nix develop -c isabelle build_log -H "Warning" -U -m 100 Untyped_Lambda | complete)
+    let out = ([($b.stdout | str trim) ($b.stderr | str trim) ($w.stdout | str trim) ($w.stderr | str trim)] | where { $in != "" } | str join "\n")
+    print $out
+    $out | ^copyq add -
+    ^copyq select 0
+    if $b.exit_code != 0 { exit $b.exit_code }
+
 # List available l4v proof tests
 l4v-list arch="ARM":
     cd l4v && nix develop ..#default -c env L4V_ARCH={{ arch }} ./run_tests -l

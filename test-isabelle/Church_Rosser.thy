@@ -6,7 +6,7 @@ inductive par_beta :: "tm \<Rightarrow> tm \<Rightarrow> bool" (infix "\<Rightar
   par_var[intro]:  "Var i \<Rightarrow>\<^sub>p Var i"
 | par_abs[intro]:  "t \<Rightarrow>\<^sub>p t' \<Longrightarrow> Abs t \<Rightarrow>\<^sub>p Abs t'"
 | par_app[intro]:  "t \<Rightarrow>\<^sub>p t' \<Longrightarrow> u \<Rightarrow>\<^sub>p u' \<Longrightarrow> App t u \<Rightarrow>\<^sub>p App t' u'"
-| par_beta[intro]: "t \<Rightarrow>\<^sub>p t' \<Longrightarrow> u \<Rightarrow>\<^sub>p u' \<Longrightarrow> App (Abs t) u \<Rightarrow>\<^sub>p (t' [u' / 0])"
+| par_beta[intro]: "t \<Rightarrow>\<^sub>p t' \<Longrightarrow> u \<Rightarrow>\<^sub>p u' \<Longrightarrow> App (Abs t) u \<Rightarrow>\<^sub>p (t' \<langle>u' / 0\<rangle>)"
 
 abbreviation par_beta_reds :: "tm \<Rightarrow> tm \<Rightarrow> bool" (infix "\<Rightarrow>\<^sub>p\<^sup>*" 50) where
   "s \<Rightarrow>\<^sub>p\<^sup>* t \<equiv> par_beta\<^sup>*\<^sup>* s t"
@@ -31,13 +31,13 @@ lemma par_beta_lift:
   by (induction arbitrary: k rule: par_beta.induct) (auto simp: lift_subst_ge)
 
 lemma par_beta_subst:
-  "t \<Rightarrow>\<^sub>p t' \<Longrightarrow> s \<Rightarrow>\<^sub>p s' \<Longrightarrow> t [s / k] \<Rightarrow>\<^sub>p t' [s' / k]"
+  "t \<Rightarrow>\<^sub>p t' \<Longrightarrow> s \<Rightarrow>\<^sub>p s' \<Longrightarrow> t \<langle>s / k\<rangle> \<Rightarrow>\<^sub>p t' \<langle>s' / k\<rangle>"
   by (induction arbitrary: s s' k rule: par_beta.induct) (auto simp: par_beta_lift subst_subst)
 
 fun cd :: "tm \<Rightarrow> tm" where
   "cd (Var i) = Var i"
 | "cd (Abs t) = Abs (cd t)"
-| "cd (App (Abs t) u) = (cd t) [cd u / 0]"
+| "cd (App (Abs t) u) = (cd t) \<langle>cd u / 0\<rangle>"
 | "cd (App t u) = App (cd t) (cd u)"
 
 lemma cd_triangle:
