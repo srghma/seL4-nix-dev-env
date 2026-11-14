@@ -25,3 +25,9 @@
 [submodule "capdl"]
 	path = capdl
 	url = ssh://git@github.com/seL4/capdl.git
+[submodule "camkes-vm-examples-ws"]
+	path = camkes-vm-examples-ws
+	url = ssh://git@github.com/srghma/camkes-vm-examples-ws.git
+[submodule "sel4test-ws"]
+	path = sel4test-ws
+	url = ssh://git@github.com/srghma/sel4test-ws.git
